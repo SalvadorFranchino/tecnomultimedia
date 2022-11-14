@@ -46,7 +46,7 @@ class Personaje {
     shape(a, this.posX, this.posY, this.tamX, this.tamY);
   }
 
-  void teclas() {
+  void salto() {
     if (this.saltando == false) {
       this.saltando = true;
     }

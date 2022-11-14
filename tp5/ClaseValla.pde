@@ -1,14 +1,13 @@
 class Valla {
   float posicionX, posicionY;
   int vel;
-  float radio;
   PShape v;
 
   Valla(int vel) {
 
     this.vel = vel;
     this.posicionX = height ;
-    this.posicionY = 340;
+    this.posicionY = width-60;
   }
 
 
@@ -16,7 +15,7 @@ class Valla {
 
 
     v=loadShape("Valla4.svg");
-    shape(v, this.posicionX, this.posicionY, 80, 80);
+    shape(v, this.posicionX, this.posicionY, 90, 90);
   }
 
 
