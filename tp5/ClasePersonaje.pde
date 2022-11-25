@@ -1,13 +1,14 @@
 class Personaje {
 
-  boolean saltando;
-  boolean cayendo;
+  boolean saltando=false;
+  boolean cayendo=false;
   float tamX, tamY, posX, posY;
   int altura = height/3;
   int piso = height;
   int velocidad;
   PShape a;
-
+  int contador;
+  int estado;
   Personaje(int velocidad) {
 
 
@@ -44,11 +45,13 @@ class Personaje {
   void dibujarPersonaje() {
     a=loadShape("atleta3.svg");
     shape(a, this.posX, this.posY, this.tamX, this.tamY);
+    
   }
 
   void salto() {
     if (this.saltando == false) {
       this.saltando = true;
+      
     }
   }
 }
