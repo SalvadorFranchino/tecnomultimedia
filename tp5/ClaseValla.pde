@@ -3,7 +3,7 @@ class Valla {
   float vel;
   PShape v;
   float radio;
-int contador;
+
   Valla(float vel) {
 
 
@@ -17,7 +17,7 @@ int contador;
   void dibujarValla() {
     v=loadShape("Valla4.svg");
     shape(v, this.posicionX, this.posicionY, 90, 90);
- text(contador, 300, 300);
+
 }
 
 
@@ -40,7 +40,7 @@ int contador;
 
       this.reiniciarPosX();
 
-      contador++;
+ 
 }
 
 }

@@ -2,7 +2,8 @@
 //Salvador Franchino , tp5 , Tecnologia Multimedial 1, Comision 1
 
 
-//lik de video:https://www.youtube.com/watch?v=i-y-8jn0iUc
+//lik de video:https://youtu.be/suMZKMMaVQQ
+
 import ddf.minim.*;
 Minim minim;
 AudioPlayer player;

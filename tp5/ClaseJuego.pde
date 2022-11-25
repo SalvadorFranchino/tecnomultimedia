@@ -6,7 +6,7 @@ class Juego {
   Fondo fondo;
   Personaje personaje;
   Valla[] valla= new Valla[2];
-  float contador=0;
+
 
   Juego() {
 
@@ -14,7 +14,7 @@ class Juego {
     personaje = new Personaje(10);                 
     for (int i = 0; i < 2; i++) {
       valla[i]=new Valla(velNueva);
-      valla[i].modificarVel(random(3, 3.5));
+      valla[i].modificarVel(random(3,3.2));
     }
   }
 
@@ -47,17 +47,15 @@ class Juego {
       player.pause();
       player.rewind();
     }
-    if (estado==4) {
-
-      Ganaste();
-    }
+      
     if (estado==5) {
       volverAjugar();
       for (int i=0; i<2; i++) {       
         valla[i].actualizar();
       }
       personaje.actualizar();
-    }
+
+  }
   }
 
   void inicio() {
@@ -77,11 +75,11 @@ class Juego {
     text ("Instrucciones", width-300, height-500);      
     textSize(20);
     text("Salta la valla  todas las veces que puedas! \n Si la chocas vas a perder! \n Utiliza la barra espaciadora para saltar ", width-300, height-350);
-    text("Pulsa S para continuar", width-300, height-100);
+    text("Pulsa S para JUGAR", width-300, height-100);
   }
   void jugar() { 
     estado = 2;         
-    contador=0;
+
     fondo.dibujarFondo(); 
     personaje.dibujarPersonaje();
     personaje.actualizar();        
@@ -101,16 +99,7 @@ class Juego {
     textSize(30);
     text("Pulsa la P para continuar ", height/2, 300);
   }
-  void Ganaste() {
-    estado=4;
-    background(0);
-    textAlign(CENTER); 
-    textSize(60);
-    fill(255);
-    text("GANASTE!", height/2, 235);
-    textSize(30);
-    text("Pulsa la G para continuar ", height/2, 300);
-  }
+  
   void volverAjugar() {
     estado= 5; 
     background(0);
@@ -136,12 +125,6 @@ class Juego {
     if (estado == 3) {
       if (key == 'p' || key == 'P') {
         estado = 5;
-      }
-    } 
-
-    if (estado == 4) {
-      if (key == 'g' || key == 'G') {
-        estado = 0;
       }
     } 
 

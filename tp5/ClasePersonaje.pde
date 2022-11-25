@@ -7,8 +7,7 @@ class Personaje {
   int piso = height;
   int velocidad;
   PShape a;
-  int contador;
-  int estado;
+
   Personaje(int velocidad) {
 
 
