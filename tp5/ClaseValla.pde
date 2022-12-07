@@ -2,36 +2,23 @@ class Valla {
   float posicionX, posicionY;
   float vel;
   PShape v;
-  float radio;
 
-  Valla(float vel) {
-
+  Valla(float vel, float posicionX, float posicionY ) {
 
     this.vel = vel;
-    this.posicionX = height ;
-    this.posicionY = width-60;
-    this.radio=width/20;
+    this.posicionX =posicionX;
+    this.posicionY = posicionY;
   }
-
 
   void dibujarValla() {
     v=loadShape("Valla4.svg");
     shape(v, this.posicionX, this.posicionY, 90, 90);
-
-}
+  }
 
 
   void reiniciarPosX() {
     this.posicionX =  height ;
   }
-
-  void modificarVel(float velNueva) {
-    this.vel = velNueva;
-    velNueva=(random(4, 10));
-  }
-
-
-
 
   void actualizar() {
     this.posicionX -= this.vel;
@@ -39,9 +26,6 @@ class Valla {
     if (this.posicionX  <= 0 ) {
 
       this.reiniciarPosX();
-
- 
-}
-
-}
+    }
+  }
 }

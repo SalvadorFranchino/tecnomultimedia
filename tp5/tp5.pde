@@ -2,7 +2,7 @@
 //Salvador Franchino , tp5 , Tecnologia Multimedial 1, Comision 1
 
 
-//lik de video:https://youtu.be/suMZKMMaVQQ
+//lik de video:https://youtu.be/V8PGbZI3GZc
 
 import ddf.minim.*;
 Minim minim;
@@ -23,6 +23,5 @@ void draw() {
   j.estados();
 }
 void keyPressed() {
-  j.salto();
   j.keyPressed();
 }
